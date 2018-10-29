@@ -3,14 +3,14 @@
     active:
     - dev
 ---
+server:
+  port: 8001
+
 spring:
   profiles: dev
   application:
     name: foyoedu-provider-base-config
     
-server:
-  port: 8001
-
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.foyoedu.common.pojo    # 所有pojo别名类所在包
