@@ -5,17 +5,13 @@
 ---
 server:
   port: 8001
-
-spring:
-  profiles: dev
-  application:
-    name: foyoedu-provider-base-config
     
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.foyoedu.common.pojo    # 所有pojo别名类所在包
 
 spring:
+  profiles: dev
   application:
     name: foyoedu-provider-base
   datasource:
@@ -42,3 +38,9 @@ eureka:
   instance:
     instance-id: ${spring.application.name}-${server.port}
     prefer-ip-address: true     #访问路径可以显示IP地址
+    
+info:
+  app.name: foyoedu
+  company.name: www.foyoedu.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
