@@ -1,14 +1,4 @@
-﻿spring:
-  profiles:
-    active:
-    - dev
----
-spring:
-  profiles: dev
-  application:
-    name: foyoedu-eureka-config
-
-server:
+﻿server:
   port: 7001
 
 eureka:
